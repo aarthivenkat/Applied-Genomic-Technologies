@@ -3,16 +3,16 @@
 ##### Xin Yi (Linda) Lei
 ##### Aarthi Venkat
 
-I. [Introduction](#1)
+I. [Introduction](#1)  
 II. [Supervised vs. Unsupervised Learning](#2)<br>
-III. [Model Selection and Optimization] {#3)
-IV. [Supervised Learning Examples](#4)
-    a. [Hidden Markov Models](#41)<br>
-    b. [Linear Regression](#42)
-V. [Unsupervised Learning Examples](#5)
-    a. [Hierarchical Clustering](#51)<br>
-    b. [K-means Clustering](#52)
-VI. [Sources](#6)
+III. [Model Selection and Optimization](#3)  
+IV. [Supervised Learning Examples](#4)  
+    a. [Hidden Markov Models](#41)<br>  
+    b. [Linear Regression](#42)  
+V. [Unsupervised Learning Examples](#5)  
+    a. [Hierarchical Clustering](#51)<br>  
+    b. [K-means Clustering](#52)  
+VI. [Sources](#6)  
 
 ## I. Introduction<a name="1"></a>
 
