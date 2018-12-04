@@ -1,7 +1,7 @@
 # Machine Learning Applications in Genomics
 ### BENG 183 Fall 2018 Sheng Zhong
 <b>Rayan Massoud</b>  
-<b>Xin Yi (Linda)</b>  
+<b>Xin Yi (Linda) Lei</b>  
 <b>Aarthi Venkat</b>  
 
 I. [Introduction](#1)   
