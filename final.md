@@ -4,14 +4,14 @@
 ##### Aarthi Venkat
 
 I. [Introduction](#1)  
-II. [Supervised vs. Unsupervised Learning](#2)<br>
+II. [Supervised vs. Unsupervised Learning](#2)
 III. [Model Selection and Optimization](#3)  
 IV. [Supervised Learning Examples](#4)  
-    a. [Hidden Markov Models](#41)<br>  
-    b. [Linear Regression](#42)  
+  a. [Hidden Markov Models](#41)
+  b. [Linear Regression](#42)
 V. [Unsupervised Learning Examples](#5)  
-    a. [Hierarchical Clustering](#51)<br>  
-    b. [K-means Clustering](#52)  
+  a. [Hierarchical Clustering](#51)
+  b. [K-means Clustering](#52)  
 VI. [Sources](#6)  
 
 ## I. Introduction<a name="1"></a>
@@ -37,7 +37,9 @@ Unsupervised learning, on the other hand, is trying to find structure in a data 
 - Input: a collection of data points
 - Output: predicted label for the unlabelled data points
 
-## 2.3.3 Hi-C<a name="233"></a>
+## III. Model Selection and Optimization  <a name="3"></a>  
+
+![](
 Hi-C is the highest through-put version of 3C-derived technologies. Due to the decreasing cost of 2nd generation sequencing, hi-c is widely used.
 
 The principle of Hi-C can be illustrated as:
