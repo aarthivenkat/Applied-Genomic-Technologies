@@ -7,11 +7,7 @@ I. [Introduction](#1)
 II. [Supervised vs. Unsupervised Learning](#2)  
 III. [Model Selection and Optimization](#3)   
 IV. [Supervised Learning Applications](#4)  
-  a. [Hidden Markov Models](#41)  
-  b. [Linear Regression](#42)  
 V. [Unsupervised Learning Applications](#5)  
-  a. [Hierarchical Clustering](#51)  
-  b. [K-means Clustering](#52)  
 VI. [Sources](#6)  
 
 ## I. Introduction<a name="1"></a>
@@ -56,11 +52,39 @@ This model requires as input a training set of labeled DNA sequences. Labels for
 Note certain limitations to this type of model, namely that it is incapable of identifying overlapping genes or multiple isoforms of the same gene. Similar limitations exist for other applications of HMMs, such as in topologically associating domain (TAD) discovery and directionality index creation in Hi-C data, wherein a simple HMM as above cannot find a hierarchy of TADs. For biological questions like this, more complex models are useful.  
 
 #### b. Linear Regression  
-Another commonplace example of supervised learning in genomics is linear regression, which can be used in population genomics and medical genetics to perform single SNP association testing through optimizing the sum of the squared differences in a dataset. Notice how this dataset can be modeled in three ways - additive, dominant, and recessive. Each model attempts to estimate the proportion of phenotypic variation, in this case, cholestorol, explained by the SNP, and uses the coefficient of determination, or R^2 value, to assign confidence to that estimation. 
+Another commonplace example of supervised learning in genomics is linear regression, which can be used in population genomics and medical genetics to perform single SNP association testing through optimizing the sum of the squared differences in a dataset. Notice how this dataset can be modeled in three ways - additive, dominant, and recessive. Each model attempts to estimate the proportion of phenotypic variation, in this case, cholestorol, explained by the SNP, and uses the coefficient of determination, or R^2 value, to assign confidence to that estimation [3]. 
 ![](/final_figures/regression.JPG)  
 One approach to choosing a statistical model is to choose the simplest model that has the right parameters and right assumptions based on our biological data, and work toward building rigor and complexity. Thus, it is important to understand what the assumptions of each model are, and how it relates to the problem we are trying to solve. In the additive model, for example, by putting a line to the dataset, we are exploring the phenomenon that the number of minor alleles, or major alleles, is correlated with phenotypic variation, and as such the two homozogytes are equally different to the heterozygote. Such phenomenon is important when performing association studies, such as for purposes related to drug target discovery.  
 
-# Reference
+## V. Unsupervised Learning Applications<a name="5"></a>  
+Finally, bioinformaticians often work with unlabelled data and use various clustering and dimensionality reduction algorithms to make sense of it. Here, we will discuss two such algorithms and their uses in the field.  
+
+#### a. Hierarchical Clustering  
+![](/final_figures/dendrogram.JPG)
+Hierarchical clustering is useful in clustering datapoints to determine a similarity relationship within clusters and between clusters. The algorithm for hieararchical clustering is as follows:  
+```
+1. First, what determines what makes some points more “similar” to each other than other points. For example, we could use distance between points as a basis for similarity  
+2. The similarity between all pairs of points is calculated
+3. Each profile is placed in its own cluster
+4. The two most similar cluster are paired together into a new cluster (While doing this we create a dendrogram, where these two points are connected by a branch)
+5. Similarity is calculated using a specified clustering method (Examples are UPGMA, Complete Linkage and Single Linkage)
+6. Repeat steps the above two steps until everything is in one cluster
+```
+Hiearchical clustering has applications including quality checking (do technical/biological replicates cluster together?) or in evolutionary genomics, such as phylogenetic tree inference.  
+
+#### b. K-means Clustering  
+![](final_figures/kmeans.JPG)
+K-means clustering offers a simple alternative method of aggregating datapoints for further analysis. The algorithm for k-means clustering is as follows:  
+```
+1. Begin with predetermined choice of clusters K, which are represented by centroids. Iterate the following two steps.
+2. For each data point, find the closest mean vector and assign the object to the corresponding cluster
+3. For each cluster, update its mean vector based on all the points that have been assigned to it
+4. Terminate after predetermined number of iterations OR after a certain percentage of data points converge inside a cluster. (Alternatively, when nothing changes, meaning no points are assigned to different clusters compared to the previous iteration, we stop.)
+```  
+K-means clustering can be used to cluster gene expression profiles to predict gene function or cluster patient samples to predict clinical characteristics [4]. Altogether, both clustering methods offer valuable information in inferring and modeling the behavior of biological occurrences. One key difference between the two methods are that hierarchical clustering is determinate, that is it will always result in the same solution, whereas k-means depends on random initialization, which may change the solution. Another difference is that hierarchical clustering allows the scientist to understand the hierarchy within a cluster, whereas k-means rigidly assigns clusters without an understanding of their relationship within and to each other.  
+
+# References outside of class
 [1] Libbrecht M.W., Noble W. S. Machine Learning Applications in Genetics and Genomics. Nature Reviews Genetics. 16, (2015) 321-332.  
 [2] Ernst, Jason and Manolis Kellis. “ChromHMM: automating chromatin-state discovery and characterization” Nature methods vol. 9,3 215-6. 28 Feb. 2012, doi:10.1038/nmeth.1906  
-
+[3] Thornton, Timothy and Michael Wu. "Genetic Association Testing with Quantitative Traits". Summer Institute in Statistical Genetics 2015 Lecture 2.  
+[4] Hong, Pengyu. "Clustering Algorithms, Bioinformatics Data Analysis and Tools". http://www.ibi.vu.nl/teaching/masters/bi_tools/2008/tools_lec4_2008_handout.pdf
