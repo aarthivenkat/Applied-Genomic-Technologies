@@ -1,7 +1,8 @@
 # Machine Learning Applications in Genomics
-##### Rayan Massoud
-##### Xin Yi (Linda) Lei
-##### Aarthi Venkat
+### BENG 183 Fall 2018 Sheng Zhong
+<b>Rayan Massoud</b>  
+<b>Xin Yi (Linda)</b>  
+<b>Aarthi Venkat</b>  
 
 I. [Introduction](#1)   
 II. [Supervised vs. Unsupervised Learning](#2)  
@@ -60,7 +61,7 @@ One approach to choosing a statistical model is to choose the simplest model tha
 Finally, bioinformaticians often work with unlabelled data and use various clustering and dimensionality reduction algorithms to make sense of it. Here, we will discuss two such algorithms and their uses in the field.  
 
 #### a. Hierarchical Clustering  
-![](/final_figures/dendrogram.JPG)
+![](/final_figures/dendrogram.JPG)  
 Hierarchical clustering is useful in clustering datapoints to determine a similarity relationship within clusters and between clusters. The algorithm for hieararchical clustering is as follows:  
 ```
 1. First, what determines what makes some points more “similar” to each other than other points. For example, we could use distance between points as a basis for similarity  
@@ -73,7 +74,7 @@ Hierarchical clustering is useful in clustering datapoints to determine a simila
 Hiearchical clustering has applications including quality checking (do technical/biological replicates cluster together?) or in evolutionary genomics, such as phylogenetic tree inference.  
 
 #### b. K-means Clustering  
-![](final_figures/kmeans.JPG)
+![](final_figures/kmeans.JPG)  
 K-means clustering offers a simple alternative method of aggregating datapoints for further analysis. The algorithm for k-means clustering is as follows:  
 ```
 1. Begin with predetermined choice of clusters K, which are represented by centroids. Iterate the following two steps.
@@ -83,7 +84,7 @@ K-means clustering offers a simple alternative method of aggregating datapoints 
 ```  
 K-means clustering can be used to cluster gene expression profiles to predict gene function or cluster patient samples to predict clinical characteristics [4]. Altogether, both clustering methods offer valuable information in inferring and modeling the behavior of biological occurrences. One key difference between the two methods are that hierarchical clustering is determinate, that is it will always result in the same solution, whereas k-means depends on random initialization, which may change the solution. Another difference is that hierarchical clustering allows the scientist to understand the hierarchy within a cluster, whereas k-means rigidly assigns clusters without an understanding of their relationship within and to each other.  
 
-# References outside of class
+# Sources outside of class<a name="6"></a>  
 [1] Libbrecht M.W., Noble W. S. Machine Learning Applications in Genetics and Genomics. Nature Reviews Genetics. 16, (2015) 321-332.  
 [2] Ernst, Jason and Manolis Kellis. “ChromHMM: automating chromatin-state discovery and characterization” Nature methods vol. 9,3 215-6. 28 Feb. 2012, doi:10.1038/nmeth.1906  
 [3] Thornton, Timothy and Michael Wu. "Genetic Association Testing with Quantitative Traits". Summer Institute in Statistical Genetics 2015 Lecture 2.  
