@@ -84,7 +84,7 @@ K-means clustering offers a simple alternative method of aggregating datapoints 
 ```  
 K-means clustering can be used to cluster gene expression profiles to predict gene function or cluster patient samples to predict clinical characteristics [4]. Altogether, both clustering methods offer valuable information in inferring and modeling the behavior of biological occurrences. One key difference between the two methods is that hierarchical clustering is determinate, that is it will always result in the same solution, whereas k-means depends on random initialization, which may change the solution. Another difference is that hierarchical clustering allows the scientist to understand the hierarchy of the dataset, whereas k-means rigidly assigns clusters without offering an understanding of their relationship within and to each other.  
 
-Altogher, machine learning is picking up speed in a wide array of bioinformatic applications, and it is critical to assess the considerations and recurrent challenges in such applications as they approach clinical and widespread usage. Nonetheless, such techniques offer a powerful basis from which to provide insight toward discovery in genomics.  
+Altogether, machine learning is picking up speed in a wide array of bioinformatic applications, and it is critical to assess the considerations and recurrent challenges in such applications as they approach clinical and widespread usage. Nonetheless, such techniques offer a powerful basis from which to provide insight toward discovery in genomics.  
 
 # Sources outside of class<a name="6"></a>  
 [1] Libbrecht M.W., Noble W. S. Machine Learning Applications in Genetics and Genomics. Nature Reviews Genetics. 16, (2015) 321-332.  
